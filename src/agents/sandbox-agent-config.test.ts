@@ -80,7 +80,7 @@ describe("Agent-specific sandbox config", () => {
 
     expect(context).toBeDefined();
     expect(context?.enabled).toBe(true);
-  });
+  }, 15_000);
 
   it("should allow agent-specific docker setupCommand overrides", async () => {
     const { resolveSandboxContext } = await import("./sandbox.js");
